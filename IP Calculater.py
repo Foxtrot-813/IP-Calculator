@@ -1,4 +1,3 @@
-# import ipaddress
 while True:
     try:
         ip = input("Please enter the IP address or Q for Quit: ")
@@ -46,7 +45,6 @@ while True:
             for i in range(8, 40, 8):
                 binary_subnet.append(s[x:i])
                 x += 8
-            # print(*binary_subnet, sep='.')
             print(f"Binary Subnet:    {'.'.join(binary_subnet)}")
 
 
@@ -113,8 +111,6 @@ while True:
         def general_info():
             first_ip = network_ip[:]
             last_ip = broadcast_ip[:]
-            # first_ip = copy.deepcopy(network_ip)
-            # last_ip = copy.deepcopy(broadcast_ip)
             first_ip[-1] = str(int(first_ip[-1]) + 1)
             last_ip[-1] = str(int(last_ip[-1]) - 1)
             print(f"Network Address:  {'.'.join(network_ip)}")
